@@ -9,6 +9,8 @@ import Foundation
 
 var greeting = "Hello, playground!"
 var flag = true
+var stuname: [String] = []
+var score: [Int] = []
 print("원하는 기능을 입력해주세요")
 
 while flag == true{
@@ -19,7 +21,16 @@ while flag == true{
         print("추가할 학생의 이름을 입력해주세요")
         let name = readLine()!
         if !name.isEmpty{
-            print(name)
+            
+            if stuname.contains(name) == true{
+                print("\(name)은 이미 존재하는 학생입니다. 추가하지 않습니다.")
+                break
+            }
+            else{
+                stuname.append(name)
+                print("\(name) 학생을 추가했습니다.")
+                
+            }
         }
         else{
             print("입력이 잘못되었습니다. 다시 확인해주세요.")
