@@ -11,6 +11,11 @@ var greeting = "Hello, playground!"
 var flag = true
 var stuname: [String] = []
 var score: [Int] = []
+struct stuinfo{
+    var name1: [String]=[]
+    var score1: [Int] = []
+}
+var stuinfo1=stuinfo()
 print("원하는 기능을 입력해주세요")
 
 while flag == true{
