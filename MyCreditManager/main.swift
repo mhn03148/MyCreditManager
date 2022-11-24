@@ -10,23 +10,23 @@ import Foundation
 var greeting = "Hello, playground!"
 var flag = true
 var stuname: [String] = []
-var score: [Int] = []
+
 struct stuinfo{
     var name1: [String]=[]
+    var sub: [String]=[]
     var score1: [Int] = []
 }
-var stuinfo1=stuinfo()
+var stuinfo1:[stuinfo] = []
 print("원하는 기능을 입력해주세요")
 
 while flag == true{
     print("1: 학생추가, 2: 학생삭제, 3: 성적추가(변경), 4: 성적삭제, 5: 평점보기, X: 종료")
-    let pick = readLine()!
+    var pick = readLine()!
     switch pick{
     case "1":
         print("추가할 학생의 이름을 입력해주세요")
-        let name = readLine()!
+        var name:String = readLine()!
         if !name.isEmpty{
-            
             if stuname.contains(name) == true{
                 print("\(name)은 이미 존재하는 학생입니다. 추가하지 않습니다.")
                 break
@@ -34,7 +34,6 @@ while flag == true{
             else{
                 stuname.append(name)
                 print("\(name) 학생을 추가했습니다.")
-                
             }
         }
         else{
@@ -43,6 +42,7 @@ while flag == true{
     case "2":
         print("choice 1")
     case "3":
+        
         print("choice 1")
     case "4":
         print("choice 1")
