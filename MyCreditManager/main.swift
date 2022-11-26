@@ -9,6 +9,7 @@ import Foundation
 
 var greeting = "Hello, playground!"
 var flag = true
+var name : [String]
 var stuname: [String] = []
 
 struct stuinfo{
